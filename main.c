@@ -16,7 +16,7 @@ void classificarPrioridade(Requisito *requisito) {
         strcpy(requisito->prioridade, "Alta");
     } else { 
         if (requisito->impactoUsuario > 3 && requisito->viabilidadeTecnica > 3) {
-        strcpy(requisito->prioridade, "Média");
+        strcpy(requisito->prioridade, "MÃ©dia");
         } else {
         strcpy(requisito->prioridade, "Baixa");
         }
@@ -32,17 +32,17 @@ int main() {
     scanf("%d", &n);
 
     for (i = 0; i < n; i++) {
-        printf("Nome do requisito %d: ", i + 1);
+        printf("\nNome do requisito %d: ", i + 1);
         scanf("%s", requisitos[i].nome);
-        printf("Impacto no usuário final (0-10): ");
+        printf("Impacto no usuÃ¡rio final (0-10): ");
         scanf("%d", &requisitos[i].impactoUsuario);
-        printf("Viabilidade técnica (0-10): ");
+        printf("Viabilidade tÃ©cnica (0-10): ");
         scanf("%d", &requisitos[i].viabilidadeTecnica);
 
         classificarPrioridade(&requisitos[i]);
     }
 
-    printf("\nClassificação dos requisitos:\n");
+    printf("\nClassificaÃ§Ã£o dos requisitos:\n");
     for (i = 0; i < n; i++) {
         printf("Requisito: %s, Prioridade: %s\n", requisitos[i].nome, requisitos[i].prioridade);
     }
